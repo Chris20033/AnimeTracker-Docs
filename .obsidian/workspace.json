@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnimeTracker/07 Diagramas/Casos de Uso - Vista General.md",
+                "file": "AnimeTracker/04 Base de Datos/Diagrama ER.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Casos de Uso - Vista General"
+              "title": "Diagrama ER"
             }
           }
         ]
@@ -183,6 +183,10 @@
   },
   "active": "95f0867ba3bed70b",
   "lastOpenFiles": [
+    "AnimeTracker/07 Diagramas/Diagrama ER - Vista.md",
+    "AnimeTracker/07 Diagramas/Casos de Uso - Vista General.md",
+    "README.md",
+    "New Text Document.txt",
     "AnimeTracker/06 Roadmap/Plan de Sprints.md",
     "AnimeTracker/06 Roadmap/Roadmap de Desarrollo.md",
     "AGENTS.md",
@@ -203,13 +207,10 @@
     "AnimeTracker/06 Roadmap/MVP.md",
     "AnimeTracker/06 Roadmap/Funcionalidades Futuras.md",
     "AnimeTracker/07 Diagramas/Flujos de Autenticación.md",
-    "AnimeTracker/07 Diagramas/Diagrama ER - Vista.md",
     "AnimeTracker/07 Diagramas/Diagrama de Arquitectura.md",
-    "AnimeTracker/07 Diagramas/Casos de Uso - Vista General.md",
     "AnimeTracker/01 Producto/Visión del Producto.md",
     "AnimeTracker/01 Producto/Usuarios y Roles.md",
     "AnimeTracker/01 Producto/Módulos Principales.md",
-    "AnimeTracker/01 Producto/Alcance y MVP.md",
     "AnimeTracker/07 Diagramas",
     "AnimeTracker/06 Roadmap",
     "AnimeTracker/05 Arquitectura",
@@ -217,7 +218,6 @@
     "AnimeTracker/03 Dominio",
     "AnimeTracker/02 Requisitos",
     "AnimeTracker/01 Producto",
-    "AnimeTracker/00 Inicio",
-    "AnimeTracker"
+    "AnimeTracker/00 Inicio"
   ]
 }
