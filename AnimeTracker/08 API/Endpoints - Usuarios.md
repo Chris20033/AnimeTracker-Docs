@@ -105,7 +105,21 @@ Respuesta `200 OK`:
     "avatarUrl": "string|null",
     "bannerUrl": "string|null",
     "bio": "string|null",
-    "favorites": [],
+    "favorites": [
+      {
+        "id": "uuid",
+        "createdAt": "datetime",
+        "anime": {
+          "id": "uuid",
+          "externalId": "string",
+          "source": "KITSU",
+          "title": "string",
+          "titleEnglish": "string|null",
+          "alternativeTitles": [],
+          "imageUrl": "string|null"
+        }
+      }
+    ],
     "statistics": {
       "totalAnime": 0,
       "completedAnime": 0,

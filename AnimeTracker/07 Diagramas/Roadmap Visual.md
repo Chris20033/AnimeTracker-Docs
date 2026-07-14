@@ -19,7 +19,7 @@ flowchart TD
     F1["Fase 1: Preparación del proyecto<br/>Frontend, backend, PostgreSQL, Prisma, Docker, ESLint y estructura base"]
     F2["Fase 2: Sistema de autenticación<br/>Registro, login, logout, bcrypt, JWT, middleware y recuperación de contraseña"]
     F3["Fase 3: Gestión de perfil<br/>Perfil privado, edición, avatar, banner, biografía y perfil público"]
-    F4["Fase 4: Integración con API de anime<br/>Jikan API, búsqueda, detalle, manejo de errores y paginación"]
+    F4["Fase 4: Integración con API de anime<br/>Kitsu API, búsqueda, detalle, manejo de errores y paginación"]
     F5["Fase 5: Biblioteca personal<br/>Agregar anime, estado, progreso, calificación, notas y eliminación"]
     F6["Fase 6: Favoritos<br/>Agregar, eliminar y mostrar favoritos en perfil"]
     F7["Fase 7: Comentarios generales<br/>Crear, editar, eliminar y mostrar comentarios por anime"]

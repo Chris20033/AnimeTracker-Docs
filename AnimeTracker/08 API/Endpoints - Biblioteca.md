@@ -23,6 +23,7 @@ Lista la biblioteca del usuario autenticado.
 Query opcional:
 
 - `status`: `WATCHING`, `COMPLETED`, `ON_HOLD`, `DROPPED`, `PLAN_TO_WATCH`.
+- `q`: texto de búsqueda en títulos guardados del anime. Busca por título canónico, inglés, romanizado, japonés y abreviados cuando Kitsu los devuelve.
 - `page`.
 - `limit`.
 
@@ -42,8 +43,10 @@ Respuesta `200 OK`:
       "anime": {
         "id": "uuid",
         "externalId": "string",
-        "source": "JIKAN",
+        "source": "KITSU",
         "title": "string",
+        "titleEnglish": "string|null",
+        "alternativeTitles": ["string"],
         "imageUrl": "string|null",
         "episodes": 12
       }
@@ -66,7 +69,7 @@ Body:
 
 ```json
 {
-  "source": "JIKAN",
+  "source": "KITSU",
   "externalId": "string",
   "status": "PLAN_TO_WATCH"
 }
@@ -84,7 +87,7 @@ Respuesta `201 Created`:
     "anime": {
       "id": "uuid",
       "externalId": "string",
-      "source": "JIKAN",
+      "source": "KITSU",
       "title": "string"
     }
   }
@@ -94,7 +97,9 @@ Respuesta `201 Created`:
 Errores:
 
 - `400 VALIDATION_ERROR`
+- `401 AUTH_TOKEN_REQUIRED` o `AUTH_TOKEN_INVALID`
 - `409 ANIME_ALREADY_IN_LIBRARY`
+- `503 EXTERNAL_ANIME_API_ERROR` si falla Kitsu al persistir el anime.
 
 ## PATCH /api/library/:id
 
@@ -132,8 +137,13 @@ Respuesta `200 OK`:
 Errores:
 
 - `400 VALIDATION_ERROR`
+- `401 AUTH_TOKEN_REQUIRED` o `AUTH_TOKEN_INVALID`
 - `404 RESOURCE_NOT_FOUND`
 - `422 VALIDATION_ERROR` si episodios o fechas incumplen reglas.
+
+Notas:
+
+- `personalScore` acepta números enteros de `1` a `10` o `null` para dejar la entrada sin calificación personal.
 
 ## DELETE /api/library/:id
 
@@ -143,6 +153,7 @@ Respuesta `204 No Content`.
 
 Errores:
 
+- `401 AUTH_TOKEN_REQUIRED` o `AUTH_TOKEN_INVALID`
 - `404 RESOURCE_NOT_FOUND`
 
 ## Reglas Relacionadas

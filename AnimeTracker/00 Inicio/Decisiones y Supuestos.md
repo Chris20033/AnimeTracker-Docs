@@ -47,7 +47,7 @@ En base de datos no se crea tabla `biblioteca`; la tabla `user_anime_list` repre
 
 ## API Externa
 
-Se recomienda Jikan API para el MVP por simplicidad.
+Se usa Kitsu API como proveedor externo activo para búsqueda, catálogo, detalle y home.
 
 AniList GraphQL queda como mejora futura.
 

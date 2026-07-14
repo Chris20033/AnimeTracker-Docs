@@ -83,6 +83,8 @@ Campos principales:
 - `external_id`
 - `title`
 - `title_english`
+- `alternative_titles`
+- `search_text`
 - `synopsis`
 - `image_url`
 - `episodes`
@@ -99,6 +101,8 @@ Campos principales:
 Consideraciones:
 
 - `external_id` identifica el anime dentro de la API externa.
+- `alternative_titles` guarda variantes de Kitsu como título inglés, romanizado, japonés y abreviados.
+- `search_text` normaliza los títulos para búsqueda local en biblioteca.
 - No se almacenan todos los anime disponibles, solo los consultados o asociados por usuarios.
 - `source` indica la API de origen.
 

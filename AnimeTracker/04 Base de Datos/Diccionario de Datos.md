@@ -57,6 +57,8 @@ Este diccionario resume tablas, propósito y restricciones principales.
 | external_id | ID en API externa | Único con `source` |
 | title | Título principal | Requerido |
 | title_english | Título inglés | Opcional |
+| alternative_titles | Variantes de título devueltas por Kitsu | Array de texto, default `[]` |
+| search_text | Texto normalizado para búsqueda local por títulos | Texto, default `""` |
 | synopsis | Sinopsis | Opcional |
 | image_url | Imagen principal | Opcional |
 | episodes | Total de episodios | Opcional |

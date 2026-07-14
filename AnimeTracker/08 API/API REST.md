@@ -23,6 +23,7 @@ La API REST de AnimeTracker expone las funcionalidades del backend para el front
 | Autenticación | `/api/auth` | [[Endpoints - Autenticación]] |
 | Usuarios | `/api/users` | [[Endpoints - Usuarios]] |
 | Anime | `/api/anime` | [[Endpoints - Anime]] |
+| Home | `/api/home` | [[Endpoints - Home]] |
 | Biblioteca | `/api/library` | [[Endpoints - Biblioteca]] |
 | Favoritos | `/api/favorites` | [[Endpoints - Favoritos]] |
 | Estadísticas | `/api/statistics` | [[Endpoints - Estadísticas]] |
@@ -50,6 +51,7 @@ Endpoints necesarios para MVP:
 
 - Registro, login, logout lógico y recuperación de contraseña.
 - Perfil privado y perfil público.
+- Home pública con contenido dinámico.
 - Búsqueda y detalle de anime.
 - Biblioteca personal.
 - Favoritos.

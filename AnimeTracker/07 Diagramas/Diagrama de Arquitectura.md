@@ -34,7 +34,7 @@ flowchart LR
     end
 
     Prisma --> DB[(PostgreSQL)]
-    Services --> AnimeAPI[Jikan API]
+    Services --> AnimeAPI[Kitsu API]
     Services --> Email[Servicio de correo]
     Services --> Google[Google OAuth]
 

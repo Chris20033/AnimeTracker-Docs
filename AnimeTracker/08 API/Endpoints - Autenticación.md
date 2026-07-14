@@ -135,6 +135,7 @@ Respuesta `200 OK`:
 
 ```json
 {
+  "data": null,
   "message": "If the email exists, a recovery link will be sent"
 }
 ```
@@ -165,6 +166,7 @@ Respuesta `200 OK`:
 
 ```json
 {
+  "data": null,
   "message": "Password updated successfully"
 }
 ```

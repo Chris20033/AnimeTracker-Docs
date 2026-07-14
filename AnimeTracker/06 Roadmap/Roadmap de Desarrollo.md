@@ -73,7 +73,7 @@ Objetivo: permitir consulta de información de anime.
 
 Actividades:
 
-- Integración con Jikan API.
+- Integración con Kitsu API.
 - Búsqueda de anime.
 - Detalle de anime.
 - Manejo de errores.

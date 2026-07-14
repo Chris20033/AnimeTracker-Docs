@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AnimeTracker/04 Base de Datos/Diagrama ER.md",
+                "file": "AnimeTracker/06 Roadmap/Plan de Sprints.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Diagrama ER"
+              "title": "Plan de Sprints"
             }
           }
         ]
@@ -183,11 +183,22 @@
   },
   "active": "95f0867ba3bed70b",
   "lastOpenFiles": [
+    "AnimeTracker/07 Diagramas/Roadmap Visual.md",
+    "AnimeTracker/07 Diagramas/Flujos de Autenticación.md",
     "AnimeTracker/07 Diagramas/Diagrama ER - Vista.md",
+    "AnimeTracker/07 Diagramas/Diagrama de Arquitectura.md",
     "AnimeTracker/07 Diagramas/Casos de Uso - Vista General.md",
+    "AnimeTracker/04 Base de Datos/Diseño Lógico.md",
+    "AnimeTracker/04 Base de Datos/Diccionario de Datos.md",
+    "AnimeTracker/04 Base de Datos/Diagrama ER.md",
+    "AnimeTracker/02 Requisitos/Requisitos Funcionales.md",
+    "AnimeTracker/02 Requisitos/Criterios de Aceptación.md",
+    "AnimeTracker/02 Requisitos/Casos de Uso.md",
+    "AnimeTracker/01 Producto/Alcance y MVP.md",
+    "AnimeTracker/06 Roadmap/Plan de Sprints.md",
+    "AnimeTracker/08 API/Endpoints - Home.md",
     "README.md",
     "New Text Document.txt",
-    "AnimeTracker/06 Roadmap/Plan de Sprints.md",
     "AnimeTracker/06 Roadmap/Roadmap de Desarrollo.md",
     "AGENTS.md",
     "AnimeTracker/00 Inicio/AnimeTracker - Índice.md",
@@ -199,18 +210,7 @@
     "AnimeTracker/08 API/Endpoints - Estadísticas.md",
     "AnimeTracker/08 API/Endpoints - Favoritos.md",
     "AnimeTracker/08 API/Endpoints - Biblioteca.md",
-    "AnimeTracker/08 API/Endpoints - Autenticación.md",
-    "AnimeTracker/08 API/Endpoints - Anime.md",
-    "AnimeTracker/07 Diagramas/Roadmap Visual.md",
-    "AnimeTracker/08 API/Endpoints - Usuarios.md",
     "AnimeTracker/08 API",
-    "AnimeTracker/06 Roadmap/MVP.md",
-    "AnimeTracker/06 Roadmap/Funcionalidades Futuras.md",
-    "AnimeTracker/07 Diagramas/Flujos de Autenticación.md",
-    "AnimeTracker/07 Diagramas/Diagrama de Arquitectura.md",
-    "AnimeTracker/01 Producto/Visión del Producto.md",
-    "AnimeTracker/01 Producto/Usuarios y Roles.md",
-    "AnimeTracker/01 Producto/Módulos Principales.md",
     "AnimeTracker/07 Diagramas",
     "AnimeTracker/06 Roadmap",
     "AnimeTracker/05 Arquitectura",

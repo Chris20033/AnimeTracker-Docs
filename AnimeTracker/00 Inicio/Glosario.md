@@ -32,9 +32,9 @@ Valores internos normalizados:
 
 Anime marcado por un usuario como destacado. Puede mostrarse en el perfil público.
 
-## Jikan API
+## Kitsu API
 
-API no oficial basada en MyAnimeList. Recomendada para el MVP por facilidad de uso.
+API externa usada como proveedor activo de anime para búsqueda, catálogo, detalle y contenido de home.
 
 ## JWT
 

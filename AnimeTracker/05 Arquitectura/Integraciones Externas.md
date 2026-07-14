@@ -16,12 +16,12 @@ La información de anime será obtenida desde una API externa.
 
 Opciones consideradas:
 
-- Jikan API.
+- Kitsu API.
 - AniList GraphQL API.
 
 ## Recomendación Inicial
 
-Para la primera versión se recomienda iniciar con Jikan API por su facilidad de uso.
+El backend usa Kitsu API como proveedor activo para catálogo, búsqueda, detalle y contenido de home.
 
 Posteriormente se puede integrar AniList para practicar GraphQL.
 

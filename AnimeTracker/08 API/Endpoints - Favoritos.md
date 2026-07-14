@@ -31,9 +31,15 @@ Respuesta `200 OK`:
       "anime": {
         "id": "uuid",
         "externalId": "string",
-        "source": "JIKAN",
+        "source": "KITSU",
         "title": "string",
-        "imageUrl": "string|null"
+        "titleEnglish": "string|null",
+        "alternativeTitles": [],
+        "imageUrl": "string|null",
+        "type": "string|null",
+        "year": 2020,
+        "status": "string|null",
+        "score": 8.5
       }
     }
   ]
@@ -48,7 +54,7 @@ Body:
 
 ```json
 {
-  "source": "JIKAN",
+  "source": "KITSU",
   "externalId": "string"
 }
 ```
@@ -61,11 +67,14 @@ Respuesta `201 Created`:
     "id": "uuid",
     "createdAt": "datetime",
     "anime": {
-      "id": "uuid",
-      "externalId": "string",
-      "source": "JIKAN",
-      "title": "string"
-    }
+        "id": "uuid",
+        "externalId": "string",
+        "source": "KITSU",
+        "title": "string",
+        "titleEnglish": "string|null",
+        "alternativeTitles": [],
+        "imageUrl": "string|null"
+      }
   }
 }
 ```
@@ -73,7 +82,15 @@ Respuesta `201 Created`:
 Errores:
 
 - `400 VALIDATION_ERROR`
+- `401 AUTH_TOKEN_REQUIRED` o `AUTH_TOKEN_INVALID`
 - `409 FAVORITE_ALREADY_EXISTS`
+- `503 EXTERNAL_ANIME_API_ERROR` si falla Kitsu al persistir el anime.
+
+Uso frontend:
+
+- El detalle de anime y las cards de biblioteca muestran una estrella rellena/vacía para marcar o quitar favoritos.
+- La lista privada de favoritos se muestra en el perfil privado.
+- El perfil público muestra los favoritos visibles del usuario.
 
 ## DELETE /api/favorites/:id
 
@@ -84,6 +101,7 @@ Respuesta `204 No Content`.
 Errores:
 
 - `404 RESOURCE_NOT_FOUND`
+- `401 AUTH_TOKEN_REQUIRED` o `AUTH_TOKEN_INVALID`
 
 ## Reglas Relacionadas
 

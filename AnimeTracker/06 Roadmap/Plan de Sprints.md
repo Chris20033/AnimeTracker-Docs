@@ -5,7 +5,7 @@ tags:
   - animetracker/sprints
 estado: activo
 ---
-
+	
 # Plan de Sprints
 
 Este plan organiza el desarrollo completo de AnimeTracker para una sola persona trabajando backend y frontend. Cada sprint está pensado para generar un avance verificable y profesional.
@@ -220,81 +220,130 @@ Entregable: usuario puede gestionar su perfil y compartir perfil público.
 
 ### Backend
 
-- [ ] Implementar `GET /api/users/me`.
-- [ ] Implementar `PATCH /api/users/me`.
-- [ ] Implementar `GET /api/users/:username`.
-- [ ] Validar username único al editar.
-- [ ] Evitar exponer campos sensibles.
+- [x] Implementar `GET /api/users/me`.
+- [x] Implementar `PATCH /api/users/me`.
+- [x] Implementar `GET /api/users/:username`.
+- [x] Implementar Cloudinary para procesar imagenes.
+- [x] Validar username único al editar.
+- [x] Evitar exponer campos sensibles.
+
 
 ### Frontend
 
-- [ ] Crear página de perfil privado.
-- [ ] Crear formulario de edición.
-- [ ] Crear página de perfil público.
-- [ ] Mostrar avatar, banner, username y biografía.
-- [ ] Preparar secciones para favoritos y estadísticas públicas.
+- [x] Crear página de perfil privado.
+- [x] Crear formulario de edición.
+- [x] Crear página de perfil público.
+- [x] Mostrar avatar, banner, username y biografía.
+- [x] Preparar secciones para favoritos y estadísticas públicas.
 
 ### Testing y Calidad
 
-- [ ] Probar consulta de perfil privado.
-- [ ] Probar actualización de perfil.
-- [ ] Probar username duplicado.
-- [ ] Probar perfil público inexistente.
+- [x] Probar consulta de perfil privado.
+- [x] Probar actualización de perfil.
+- [x] Probar username duplicado.
+- [x] Probar perfil público inexistente.
 
 ### Documentación
 
-- [ ] Revisar [[Endpoints - Usuarios]].
-- [ ] Revisar [[Requisitos Funcionales#RF-04 Gestión de Perfil]].
-- [ ] Revisar [[Requisitos Funcionales#RF-05 Perfil Público]].
+- [x] Revisar [[Endpoints - Usuarios]].
+- [x] Revisar [[Requisitos Funcionales#RF-04 Gestión de Perfil]].
+- [x] Revisar [[Requisitos Funcionales#RF-05 Perfil Público]].
 
 ### Criterio de Cierre
 
-- [ ] Usuario edita su perfil.
-- [ ] Perfil público es visible por username.
-- [ ] No se exponen datos sensibles.
+- [x] Usuario edita su perfil.
+- [x] Perfil público es visible por username.
+- [x] No se exponen datos sensibles.
 
 ## Sprint 5 - Anime Search y Detail
 
-Objetivo: integrar búsqueda y detalle de anime usando Jikan API desde backend.
+Objetivo: integrar búsqueda y detalle de anime usando una API externa desde backend.
 
 Entregable: usuario puede buscar anime y consultar detalle.
 
 ### Backend
 
-- [ ] Crear cliente para Jikan API.
-- [ ] Implementar `GET /api/anime/search`.
-- [ ] Implementar `GET /api/anime/:source/:externalId`.
-- [ ] Normalizar respuesta externa.
-- [ ] Manejar errores de API externa.
-- [ ] Implementar paginación.
+- [x] Crear cliente para Kitsu API.
+- [x] Migrar proveedor activo de anime a Kitsu API.
+- [x] Implementar `GET /api/anime/search`.
+- [x] Implementar `GET /api/anime/:source/:externalId`.
+- [x] Normalizar respuesta externa.
+- [x] Manejar errores de API externa.
+- [x] Implementar paginación.
 
 ### Frontend
 
-- [ ] Crear página de búsqueda.
-- [ ] Crear campo de búsqueda.
-- [ ] Crear lista/grid de resultados.
-- [ ] Crear página de detalle.
-- [ ] Mostrar imagen, título, sinopsis, episodios, géneros, score y estado.
-- [ ] Implementar loading/error/empty states.
-- [ ] Implementar paginación.
+- [x] Crear página de inicio estilo MyAnimeList
+- [x] Crear página de búsqueda.
+- [x] Crear campo de búsqueda.
+- [x] Crear lista/grid de resultados.
+- [x] Crear página de detalle.
+- [x] Mostrar imagen, título, sinopsis, episodios, géneros, score y estado.
+- [x] Implementar loading/error/empty states.
+- [x] Implementar paginación.
 
 ### Testing y Calidad
 
-- [ ] Probar búsqueda con resultados.
-- [ ] Probar búsqueda sin resultados.
-- [ ] Probar detalle válido.
-- [ ] Probar fallo de API externa.
+- [x] Probar búsqueda con resultados.
+- [x] Probar búsqueda sin resultados.
+- [x] Probar detalle válido.
+- [x] Probar fallo de API externa.
 
 ### Documentación
 
-- [ ] Revisar [[Endpoints - Anime]].
-- [ ] Revisar [[Integraciones Externas]].
+- [x] Revisar [[Endpoints - Anime]].
+- [x] Revisar [[Integraciones Externas]].
+
+### Extra - Home dinámica backend
+
+- [x] Hacer pública la búsqueda de anime.
+- [x] Hacer público el detalle de anime.
+- [x] Implementar `GET /api/home`.
+- [x] Implementar `GET /api/home/featured`.
+- [x] Implementar `GET /api/home/top-airing`.
+- [x] Implementar `GET /api/home/seasonal`.
+- [x] Implementar `GET /api/home/upcoming`.
+- [x] Implementar `GET /api/home/popular`.
+- [x] Implementar `GET /api/home/recommendations`.
+- [x] Normalizar datos para hero, carruseles y recomendaciones.
+- [x] Documentar endpoints de home en Swagger.
+- [x] Verificar endpoints públicos sin JWT.
+
+### Extra - Home dinámica Frontend
+- [x] Conectar backend con frontend.
+- [x] Crear componente de carrusel para mostrar contenido
+
+### Extra - Catálogo de Anime backend
+- [x] Implementar `GET /api/anime/catalog`.
+- [x] Implementar filtros públicos de catálogo.
+- [x] Implementar `GET /api/anime/genres`.
+- [x] Documentar catálogo en Swagger.
+- [x] Verificar catálogo público sin JWT.
+
+### Extra - Catálogo de Anime Frontend
+- [x] Conectar `GET /api/anime/catalog`.
+- [x] Conectar `GET /api/anime/genres`.
+- [x] Convertir `/anime` en catálogo público.
+- [x] Mantener búsqueda mediante query `q`.
+- [x] Implementar filtros públicos de catálogo.
+- [x] Mantener paginación y cache con TanStack Query.
 
 ### Criterio de Cierre
 
-- [ ] Usuario busca anime.
-- [ ] Usuario abre detalle.
-- [ ] Frontend no consume Jikan directamente.
+- [x] Usuario busca anime.
+- [x] Usuario abre detalle.
+- [x] Frontend no consume la API externa directamente.
+
+### Extra - Migración Anime API a Kitsu
+
+- [x] Crear cliente Kitsu.
+- [x] Migrar búsqueda a Kitsu.
+- [x] Migrar catálogo a Kitsu.
+- [x] Migrar detalle a Kitsu.
+- [x] Migrar home dinámica a Kitsu.
+- [x] Migrar géneros a categorías Kitsu.
+- [x] Actualizar Swagger.
+- [x] Verificar endpoints públicos sin JWT.
 
 ## Sprint 6 - Biblioteca Personal
 
@@ -304,27 +353,32 @@ Entregable: usuario puede administrar su biblioteca personal.
 
 ### Backend
 
-- [ ] Implementar `GET /api/library`.
-- [ ] Implementar `POST /api/library`.
-- [ ] Implementar `PATCH /api/library/:id`.
-- [ ] Implementar `DELETE /api/library/:id`.
-- [ ] Persistir anime al agregarlo si no existe.
-- [ ] Validar anime duplicado por usuario.
-- [ ] Validar estados `WATCHING`, `COMPLETED`, `ON_HOLD`, `DROPPED`, `PLAN_TO_WATCH`.
-- [ ] Validar episodios vistos.
-- [ ] Validar calificación personal.
-- [ ] Validar fechas.
+- [x] Implementar `GET /api/library`.
+- [x] Implementar `POST /api/library`.
+- [x] Implementar `PATCH /api/library/:id`.
+- [x] Implementar `DELETE /api/library/:id`.
+- [x] Persistir anime al agregarlo si no existe.
+- [x] Validar anime duplicado por usuario.
+- [x] Validar estados `WATCHING`, `COMPLETED`, `ON_HOLD`, `DROPPED`, `PLAN_TO_WATCH`.
+- [x] Validar episodios vistos.
+- [x] Validar calificación personal.
+- [x] Validar fechas.
 
 ### Frontend
 
-- [ ] Crear página de biblioteca.
-- [ ] Crear filtros por estado.
-- [ ] Crear formulario para agregar a biblioteca desde detalle.
-- [ ] Crear edición rápida de estado.
-- [ ] Crear edición de episodios vistos.
-- [ ] Crear edición de calificación y notas.
-- [ ] Crear acción eliminar de biblioteca.
+- [x] Crear página de biblioteca.
+- [x] Crear filtros por estado.
+- [x] Crear formulario para agregar a biblioteca desde detalle.
+- [x] Crear edición rápida de estado.
+- [x] Crear edición de episodios vistos.
+- [x] Crear edición de calificación y notas.
+- [x] Crear acción eliminar de biblioteca.
+- [x] Crear búsqueda por título en biblioteca.
 
+### Extra - Frontend
+
+- [x] Arreglar bug carrusel.
+- [x] Agregar paginación numérica en catálogo.
 ### Testing y Calidad
 
 - [ ] Probar agregar anime.
@@ -335,9 +389,9 @@ Entregable: usuario puede administrar su biblioteca personal.
 
 ### Documentación
 
-- [ ] Revisar [[Endpoints - Biblioteca]].
+- [x] Revisar [[Endpoints - Biblioteca]].
 - [ ] Revisar [[Reglas de Negocio]].
-- [ ] Actualizar DB docs si cambia el schema.
+- [x] Actualizar DB docs si cambia el schema.
 
 ### Criterio de Cierre
 
@@ -352,36 +406,43 @@ Entregable: sistema de favoritos funcional.
 
 ### Backend
 
-- [ ] Implementar `GET /api/favorites`.
-- [ ] Implementar `POST /api/favorites`.
-- [ ] Implementar `DELETE /api/favorites/:id`.
-- [ ] Evitar favoritos duplicados.
-- [ ] Persistir anime si se marca favorito y no existe localmente.
+- [x] Implementar `GET /api/favorites`.
+- [x] Implementar `POST /api/favorites`.
+- [x] Implementar `DELETE /api/favorites/:id`.
+- [x] Evitar favoritos duplicados.
+- [x] Persistir anime si se marca favorito y no existe localmente.
 
 ### Frontend
 
-- [ ] Crear botón marcar favorito en detalle.
-- [ ] Crear botón quitar favorito.
-- [ ] Crear sección/lista de favoritos.
-- [ ] Mostrar favoritos en perfil público.
-- [ ] Mostrar estado visual de favorito.
+- [x] Crear botón marcar favorito en detalle.
+- [x] Crear botón quitar favorito.
+- [x] Crear sección/lista de favoritos.
+- [x] Mostrar favoritos en perfil público.
+- [x] Mostrar estado visual de favorito.
+
+### Extra - Frontend
+
+- [x] Optimizar carga inicial con lazy loading por rutas en `AppRouter`.
+- [x] Agregar fallback accesible para carga de páginas bajo demanda.
+- [x] Restaurar scroll al inicio al cambiar de página en catálogo y biblioteca.
+- [x] Pulir listas de favoritos para perfiles con muchas entradas.
 
 ### Testing y Calidad
 
-- [ ] Probar agregar favorito.
-- [ ] Probar favorito duplicado.
-- [ ] Probar eliminar favorito.
-- [ ] Probar favoritos en perfil público.
+- [x] Probar agregar favorito.
+- [x] Probar favorito duplicado.
+- [x] Probar eliminar favorito.
+- [x] Probar favoritos en perfil público.
 
 ### Documentación
 
-- [ ] Revisar [[Endpoints - Favoritos]].
-- [ ] Revisar [[Reglas de Negocio#RN-14 Favorito Único]].
+- [x] Revisar [[Endpoints - Favoritos]].
+- [x] Revisar [[Reglas de Negocio#RN-14 Favorito Único]].
 
 ### Criterio de Cierre
 
-- [ ] Usuario puede gestionar favoritos.
-- [ ] Perfil público muestra favoritos.
+- [x] Usuario puede gestionar favoritos.
+- [x] Perfil público muestra favoritos.
 
 ## Sprint 8 - Estadísticas y Dashboard
 
@@ -391,39 +452,39 @@ Entregable: panel de usuario con resumen de actividad.
 
 ### Backend
 
-- [ ] Implementar `GET /api/statistics/me`.
-- [ ] Implementar `GET /api/statistics/users/:username`.
-- [ ] Calcular total de anime.
-- [ ] Calcular anime completados.
-- [ ] Calcular episodios vistos.
-- [ ] Calcular promedio de calificaciones.
-- [ ] Calcular géneros principales.
-- [ ] Calcular distribución por estado.
+- [x] Implementar `GET /api/statistics/me`.
+- [x] Implementar `GET /api/statistics/users/:username`.
+- [x] Calcular total de anime.
+- [x] Calcular anime completados.
+- [x] Calcular episodios vistos.
+- [x] Calcular promedio de calificaciones.
+- [x] Calcular géneros principales.
+- [x] Calcular distribución por estado.
 
 ### Frontend
 
-- [ ] Crear dashboard.
-- [ ] Crear cards de estadísticas.
-- [ ] Crear visualización por estados.
-- [ ] Crear sección de anime en progreso.
-- [ ] Crear sección de favoritos recientes.
-- [ ] Crear estados vacíos para usuarios nuevos.
+- [x] Crear dashboard.
+- [x] Crear cards de estadísticas.
+- [x] Crear visualización por estados.
+- [x] Crear sección de anime en progreso.
+- [x] Crear sección de favoritos recientes.
+- [x] Crear estados vacíos para usuarios nuevos.
 
 ### Testing y Calidad
 
-- [ ] Probar estadísticas sin datos.
-- [ ] Probar estadísticas con biblioteca variada.
-- [ ] Probar estadísticas públicas.
+- [x] Probar estadísticas sin datos.
+- [x] Probar estadísticas con biblioteca variada.
+- [x] Probar estadísticas públicas.
 
 ### Documentación
 
-- [ ] Revisar [[Endpoints - Estadísticas]].
-- [ ] Revisar [[Requisitos Funcionales#RF-12 Estadísticas Personales]].
+- [x] Revisar [[Endpoints - Estadísticas]].
+- [x] Revisar [[Requisitos Funcionales#RF-12 Estadísticas Personales]].
 
 ### Criterio de Cierre
 
-- [ ] Dashboard muestra datos reales.
-- [ ] Estadísticas públicas y privadas funcionan.
+- [x] Dashboard muestra datos reales.
+- [x] Estadísticas públicas y privadas funcionan.
 
 ## Sprint 9 - UX, Calidad Visual y Accesibilidad
 
@@ -433,38 +494,38 @@ Entregable: interfaz pulida, responsive y coherente.
 
 ### Frontend
 
-- [ ] Definir dirección visual del producto.
-- [ ] Revisar tipografía, espaciado y jerarquía.
-- [ ] Mejorar navegación principal.
-- [ ] Mejorar responsive mobile.
-- [ ] Añadir skeleton loaders.
-- [ ] Añadir estados vacíos cuidados.
-- [ ] Añadir estados de error útiles.
-- [ ] Mejorar feedback en formularios.
-- [ ] Revisar contraste y foco visible.
-- [ ] Revisar accesibilidad básica con teclado.
+- [x] Definir dirección visual del producto.
+- [x] Revisar tipografía, espaciado y jerarquía.
+- [x] Mejorar navegación principal.
+- [x] Mejorar responsive mobile.
+- [x] Añadir skeleton loaders.
+- [x] Añadir estados vacíos cuidados.
+- [x] Añadir estados de error útiles.
+- [x] Mejorar feedback en formularios.
+- [x] Revisar contraste y foco visible.
+- [x] Revisar accesibilidad básica con teclado.
 
 ### Backend
 
-- [ ] Revisar mensajes de error para frontend.
-- [ ] Revisar consistencia de respuestas.
+- [x] Revisar mensajes de error para frontend.
+- [x] Revisar consistencia de respuestas.
 
 ### Testing y Calidad
 
-- [ ] Probar flujo completo en desktop.
-- [ ] Probar flujo completo en mobile.
-- [ ] Probar estados de loading/error/empty.
-- [ ] Ejecutar lint/build.
+- [x] Probar flujo completo en desktop.
+- [x] Probar flujo completo en mobile.
+- [x] Probar estados de loading/error/empty.
+- [x] Ejecutar lint/build.
 
 ### Documentación
 
-- [ ] Actualizar [[Frontend]] si cambian patrones de UI.
+- [x] Actualizar [[Frontend]] si cambian patrones de UI.
 - [ ] Actualizar screenshots si ya existen.
 
 ### Criterio de Cierre
 
-- [ ] La app se siente consistente y presentable para portafolio.
-- [ ] La app funciona correctamente en mobile.
+- [x] La app se siente consistente y presentable para portafolio.
+- [x] La app funciona correctamente en mobile.
 
 ## Sprint 10 - Testing Profesional
 
@@ -474,40 +535,47 @@ Entregable: suite mínima de pruebas y scripts confiables.
 
 ### Backend
 
-- [ ] Configurar framework de testing backend.
-- [ ] Probar autenticación.
-- [ ] Probar usuarios/perfil.
-- [ ] Probar biblioteca.
-- [ ] Probar favoritos.
-- [ ] Probar estadísticas.
-- [ ] Probar middlewares de auth y errores.
+- [x] Configurar Vitest y Supertest.
+- [x] Probar autenticación.
+- [x] Probar usuarios y perfil.
+- [x] Probar biblioteca.
+- [x] Probar favoritos.
+- [x] Probar estadísticas.
+- [x] Probar validaciones (Zod).
+- [x] Probar middlewares (auth, upload y manejo de errores).
 
 ### Frontend
 
-- [ ] Configurar testing frontend mínimo.
-- [ ] Probar render de páginas críticas.
-- [ ] Probar formularios principales.
-- [ ] Probar estados de carga/error.
+- [x] Configurar Vitest y React Testing Library.
+- [x] Probar páginas principales.
+- [x] Probar componentes principales.
+- [x] Probar formularios.
+- [x] Probar estados de carga, éxito y error.
+
+### Opcional
+
+- [x] Configurar Playwright para pruebas End-to-End.
+- [x] Probar flujo completo de la aplicación (login → búsqueda → biblioteca → favoritos).
 
 ### Calidad
 
-- [ ] Crear script `lint`.
-- [ ] Crear script `test`.
-- [ ] Crear script `build`.
-- [ ] Ejecutar lint completo.
-- [ ] Ejecutar tests completos.
-- [ ] Ejecutar build frontend.
+- [x] Crear script `lint`.
+- [x] Crear script `test`.
+- [x] Crear script `build`.
+- [x] Ejecutar lint completo.
+- [x] Ejecutar tests completos.
+- [x] Ejecutar build frontend.
 - [ ] Ejecutar build backend si aplica.
 
 ### Documentación
 
-- [ ] Documentar estrategia de pruebas.
+- [x] Documentar estrategia de pruebas.
 - [ ] Actualizar README cuando exista.
 
 ### Criterio de Cierre
 
-- [ ] Scripts de calidad funcionan localmente.
-- [ ] Flujos críticos tienen cobertura mínima.
+- [x] Scripts de calidad funcionan localmente.
+- [x] Flujos críticos tienen cobertura mínima.
 
 ## Sprint 11 - Deploy
 
@@ -517,44 +585,44 @@ Entregable: frontend, backend y base de datos desplegados.
 
 ### Backend
 
-- [ ] Preparar backend para producción.
-- [ ] Configurar variables de entorno.
-- [ ] Configurar CORS producción.
-- [ ] Configurar migraciones en producción.
-- [ ] Desplegar en Render o Railway.
+- [x] Preparar backend para producción.
+- [x] Configurar variables de entorno.
+- [x] Configurar CORS producción.
+- [x] Configurar migraciones en producción.
+- [x] Desplegar en Render o Railway.
 
 ### Frontend
 
-- [ ] Preparar variables de entorno frontend.
-- [ ] Configurar URL del backend.
-- [ ] Desplegar en Vercel.
-- [ ] Validar rutas públicas y privadas.
+- [x] Preparar variables de entorno frontend.
+- [x] Configurar URL del backend.
+- [x] Desplegar en Vercel.
+- [x] Validar rutas públicas y privadas.
 
 ### Base de Datos
 
-- [ ] Provisionar PostgreSQL en Neon, Railway o Render.
-- [ ] Ejecutar migraciones.
-- [ ] Validar conexión desde backend.
+- [x] Provisionar PostgreSQL en Neon, Railway o Render.
+- [x] Ejecutar migraciones.
+- [x] Validar conexión desde backend.
 
 ### Testing y Calidad
 
-- [ ] Validar registro en producción.
-- [ ] Validar login en producción.
-- [ ] Validar búsqueda de anime.
-- [ ] Validar biblioteca.
-- [ ] Validar favoritos.
-- [ ] Validar estadísticas.
+- [x] Validar registro en producción.
+- [x] Validar login en producción.
+- [x] Validar búsqueda de anime.
+- [x] Validar biblioteca.
+- [x] Validar favoritos.
+- [x] Validar estadísticas.
 
 ### Documentación
 
-- [ ] Actualizar [[Despliegue]].
-- [ ] Documentar variables reales requeridas sin secretos.
-- [ ] Documentar pasos de deploy.
+- [x] Actualizar [[Despliegue]].
+- [x] Documentar variables reales requeridas sin secretos.
+- [x] Documentar pasos de deploy.
 
 ### Criterio de Cierre
 
-- [ ] App accesible desde Internet.
-- [ ] Flujos principales funcionan en producción.
+- [x] App accesible desde Internet.
+- [x] Flujos principales funcionan en producción.
 
 ## Sprint 12 - CI/CD y Portafolio
 
@@ -579,24 +647,24 @@ Entregable: pipeline CI/CD funcional y documentación lista para portafolio.
 
 ### Portafolio
 
-- [ ] Crear README profesional.
-- [ ] Añadir descripción del problema.
-- [ ] Añadir stack técnico.
-- [ ] Añadir capturas de pantalla.
-- [ ] Añadir diagrama de arquitectura.
-- [ ] Añadir diagrama ER.
-- [ ] Añadir guía de instalación.
-- [ ] Añadir guía de despliegue.
-- [ ] Añadir enlaces a demo.
-- [ ] Añadir lista de funcionalidades.
+- [x] Crear README profesional.
+- [x] Añadir descripción del problema.
+- [x] Añadir stack técnico.
+- [x] Añadir capturas de pantalla.
+- [x] Añadir diagrama de arquitectura.
+- [x] Añadir diagrama ER.
+- [x] Añadir guía de instalación.
+- [x] Añadir guía de despliegue.
+- [x] Añadir enlaces a demo.
+- [x] Añadir lista de funcionalidades.
 
 ### Documentación
 
-- [ ] Revisar documentación completa en Obsidian.
-- [ ] Actualizar [[Roadmap de Desarrollo]].
-- [ ] Actualizar [[Despliegue]].
-- [ ] Actualizar [[API REST]] si cambió algo.
-- [ ] Marcar MVP como completado cuando aplique.
+- [x] Revisar documentación completa en Obsidian.
+- [x] Actualizar [[Roadmap de Desarrollo]].
+- [x] Actualizar [[Despliegue]].
+- [x] Actualizar [[API REST]] si cambió algo.
+- [x] Marcar MVP como completado cuando aplique.
 
 ### Criterio de Cierre
 
@@ -616,7 +684,7 @@ Entregable: pipeline CI/CD funcional y documentación lista para portafolio.
 - [ ] Aplicación PWA.
 - [ ] Panel administrativo avanzado.
 - [ ] Recomendaciones personalizadas.
-- [ ] Integración con AniList GraphQL.
+- [ ] Integrar múltiples lenguajes.
 
 ## Referencias Relacionadas
 

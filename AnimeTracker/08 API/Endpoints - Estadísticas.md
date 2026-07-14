@@ -32,7 +32,7 @@ Respuesta `200 OK`:
     "topGenres": [
       {
         "name": "Action",
-        "count": 0
+        "count": 2
       }
     ],
     "statusDistribution": {
@@ -85,7 +85,14 @@ Respuesta `200 OK`:
 
 Errores:
 
+- `400 VALIDATION_ERROR`
 - `404 RESOURCE_NOT_FOUND`
+
+Notas:
+
+- `topGenres` devuelve máximo 5 géneros ordenados por cantidad descendente.
+- `averageScore` considera solo entradas con `personalScore` definido.
+- `statusDistribution` siempre incluye todos los estados aunque su valor sea `0`.
 
 ## Referencias Relacionadas
 
